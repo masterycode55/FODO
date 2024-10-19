@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none; 
+    scroll-behavior: smooth;
+}
+:root{
+    --max-width:1200px;
+    --primary-color:#900d1a;
+    --primary-light-color:#E6839C;
+    --secondry-color:#1e2022;
+    ---text:#ebe7e7e7;
+}
+.section-container{
+    padding: 5rem 2rem;
+    margin-bottom: 2rem;
+    max-width: var(--max-width);
+    margin: auto;
+}
+.btn{
+    padding: 1rem 2rem;
+    width: 170px;
+    color: var(---text);
+    background: var(--primary-color);
+    font-size: 1rem;
+    font-weight: 500;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    transition: all .50s ease;
+    cursor: pointer;
+}
+
+.btn:hover{
+   background-color: var(--secondry-color);
+    color: var(--primary-color);
+}
+
+.bg-blur{
+    position: absolute;
+    box-shadow: 0 0 100px 50px var(--primary-color);
+    z-index: -1;
+   
+}
+img{
+    display: flex;
+    width: 100%;
+}
+.section-header{
+    font-size: 5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    background:linear-gradient(180deg,#900d1a,#E6839C);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    text-align: left;
+}
+.p-section{
+    color: var(---text);
+    line-height: 200%;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+body{
+    background: var(--secondry-color);
+}
+body::-webkit-scrollbar{
+    width: 15px;
+}
+body::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background: var(--primary-color);
+}
+body::-webkit-scrollbar-track{
+    background: var(--primary-light-color);
+
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+}
+.nav-logo a img{
+    max-width: 100px;
+    transition: all .50s ease;
+}
+.nav-logo a img:hover{
+    transform: scale(1.2);
+}
+.nav-links{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+.links a{
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: 400;
+    position: relative;
+}
+.links a::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: var(--primary-color);
+    transition: all .50s ease;
+}
+.links a:hover:after{
+    width: 50%;
+}
+.home{
+    position:relative;
+    padding-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 2rem;
+}
+.home-content h2{
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+.home-content .home-blur{
+    z-index: -1;
+    bottom: 2rem;
+    right:1rem;
+    box-shadow: 0 0 100px 50px red;
+}
+.home-image{
+    position: relative;
+}
+.home-image::before{
+    position: absolute;
+    content: 'FODO';
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 20rem;
+    line-height: 200%;
+    color: var(--primary-light-color);
+    opacity: .5;
+    z-index: -1;
+}
+.explore-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+.explore-nav span{
+    text-align: center;
+    padding:6px 6px;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    border:2px solid var(--primary-light-color);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .50s ease;
+}
+.menu{
+    padding-top:5rem;
+    text-align: center;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+.menu-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-top: 5rem;
+    gap: 1rem;
+}
+.menu-grid .menu-card{
+    padding:2rem;
+    border: 1px solid transparent;
+    border-color: var(--primary-light-color);
+    border-radius: 10px;
+    transition: all .50s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+
+.menu-grid .menu-card:hover{
+    border-color: var(--primary-color);
+    background-color: var(--secondry-color);
+}
+
+.menu-grid .menu-card img{
+    max-width: 250px;
+    margin:auto;
+}
+.menu-grid .menu-card p{
+    text-align: left;
+    line-height: 200%;
+    font-size: 1.2rem;
+    color: var(---text);
+    margin-bottom: 2rem;
+}
+.menu-grid .menu-card h4{
+    font-size: 2rem;
+    color: var(---text);
+    margin-bottom: .5rem;
+    font-weight: 700;
+}
+.menu-grid .menu-card h3{
+    color: var(---text);
+    font-size: 2rem;
+}
+.menu-grid .menu-card .icon{
+   display: block;
+   margin-bottom: 0.7rem;
+}
+.menu-grid .menu-card .icon span{
+    color: var(---text);
+    font-size: 2rem;
+    transition: all .50s ease;
+    cursor: pointer;
+}
+.menu-grid .menu-card .icon span:hover{
+    color: gold;
+}
+.menu-grid .menu-card .btn-order{
+    width: 100%;
+
+}
+.services{
+    margin-top: 3rem;
+}
+.services-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-top: 3rem;
+    gap: 3rem;
+}
+.services-card{
+    padding: 2rem;
+    background: var(--primary-color);
+    border: 1px solid transparent;
+    border-color: var(--primary-color);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition: all .50s ease;
+    cursor: pointer;
+}
+.services-card:hover{
+    transform: scale(1.2);
+}
+.services-card h2{
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(---text);
+    margin-bottom: 2rem;
+    margin: auto;
+}
+.services-card  span{
+    color: var(---text);
+    font-size: 10rem;
+    margin-bottom: 1rem;
+}
+.services-card p{
+    text-align: center;
+    line-height: 200%;
+    color: var(---text);
+    font-size: 1.2rem;
+}
+.reivew{
+    background-color: var(--primary-color);;
+}
+.reivew-container .reivew{
+    background: linear-gradient(#1e2022,#E6839C);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip:text;
+}
+.reivew-container>span{
+    font-size: 10rem;
+    color: var(---text);
+
+}
+.reivew-container p{
+    line-height: 200%;
+    font-size: 1.5rem;
+}
+.reivew-container span i{
+    color: var(---text);
+    font-size: 3rem;
+    transition: all .50s ease;
+    cursor: pointer;
+}
+.reivew-container span i:hover{
+    color: gold;
+
+}
